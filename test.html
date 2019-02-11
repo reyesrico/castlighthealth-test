@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="favicon.ico">
+  <link href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css">
+  <link href="test.css" rel="stylesheet" type="text/css">
+  <title>Castlight Health</title>
+</head>
+
+<body>
+  <div class="search-results">
+    <div class="search-results__summary">
+      <div class="search-results__summary-description">
+        <div class="search-results__summary-title">Search for results for
+          <span class="search-results__query">"QUERY"</span>
+          [VISIT TYPE] >
+        </div>
+        <div class="search-results__summary-text">[DESCRIPTION TEXT]</div>
+      </div>
+      <div class="search-results__summary-cost">[COST SUMMARY]</div>
+    </div>
+
+    <div class="search-results__body">
+      <div class="search-results__info">
+        <div class="search-results__filters">
+          <table class="search-results__table">
+            <thead>
+              <tr>
+                <th>Sort by</th>
+                <th>Distance</th>
+                <th>Type of care</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <select name="sort" size="1">
+                    <option value="least">Least expensive</option>
+                    <option value="mid">Mid expensive</option>
+                    <option value="high">High expensive</option>
+                  </select>
+                </td>
+                <td>
+                  <select name="distance" size="1">
+                    <option value="5">5 miles</option>
+                    <option value="10">10 miles</option>
+                    <option value="25">25 miles</option>
+                  </select>
+                </td>
+                <td>
+                  <select name="care" size="1">
+                    <option value="help">Help with a problem</option>
+                  </select>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <div><a href="#">Show filters</a></div>
+        </div>
+        <div class="search-results__pagination">
+          <a href="#">&lt;</a>
+          <a href="#">1</a>
+          <a href="#">2</a>
+          <a href="#">3</a>
+          <a href="#">4</a>
+          <a href="#">5</a>
+          <a href="#">...</a>
+          <a href="#">15</a>
+          <a href="#">&gt;</a>
+        </div>
+        <div class="search-results__results">
+          <div class="search-results__recommended">
+            <div class="search-results__recommended-row">
+              <div class="search-results__row-data">
+                <div><img src="provider.png" /></div>
+                <div class="search-results__row-info">
+                  <span class="search-results__row-info-recommended">RECOMMENDED</span>
+                  <div class="search-results__provider"><a href="#">Pinned Provider Name</a></div>
+                  <span class="search-results__row-pinned-text">Pinned result text</span>
+                </div>
+              </div>
+              <div class="search-results__row-ratings">
+                <div class="search-results__row-image"><img src="star.png" /><span>4.8</span></div>
+                <div class="search-results__row-text">2 RATINGS</div>
+              </div>
+            </div>
+            <div class="search-results__recommended-row">
+              <div class="search-results__row-data">
+                <div><img src="provider.png" /></div>
+                <div class="search-results__row-info">
+                  <span class="search-results__row-info-recommended">RECOMMENDED</span>
+                  <a href="#">Pinned Provider Name</a>
+                  <span>Pinned result text</span>
+                </div>
+              </div>
+              <div class="search-results__row-ratings">
+                <div class="search-results__row-image"><img src="star.png" /><span>4.6</span></div>
+                <div class="search-results__row-text">23 RATINGS</div>
+              </div>
+            </div>
+          </div>
+          <div class="search-results__list">
+            <div class="search-results__recommended-row">
+              <div class="search-results__row-info">
+                <div><a href="#">Promoted Provider Name</a></div>
+                <div class="search-results__specialty">specialty, specialty, specialty</div>
+                <div class="search-results__address">street address</div>
+                <div class="search-results__city">city (#mi)</div>
+                <div class="search-results__in-network">IN NETWORK</div>
+              </div>
+              <div class="search-results__row-ratings">
+                <div class="search-results__row-image"><img src="star.png" /><span>3.6</span></div>
+                <div class="search-results__row-text">168 RATINGS</div>
+              </div>
+            </div>
+            <div class="search-results__recommended-row">
+              <div class="search-results__row-info">
+                <div><a href="#">Provider Name</a></div>
+                <div class="search-results__specialty">specialty, specialty, specialty</div>
+                <div class="search-results__address">street address</div>
+                <div class="search-results__city">city (#mi)</div>
+              </div>
+              <div class="search-results__row-ratings">
+                <div class="search-results__row-image"><img src="star.png" /><span>2.8</span></div>
+                <div class="search-results__row-text">2 RATINGS</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="search-results__map">
+        <div id="map"></div>
+        <div class="search-results__map-button">Show Map</div>
+      </div>
+    </div>
+  </div>
+  <script>
+    // Initialize and add the map
+    function initMap() {
+      // The location of Uluru
+      var uluru = { lat: 37.787380, lng: -122.415549 };
+      //-25.344, 131.036
+      // The map, centered at Uluru
+      var map = new google.maps.Map(
+        document.getElementById('map'), { zoom: 4, center: uluru });
+      // The marker, positioned at Uluru
+      var marker = new google.maps.Marker({ position: uluru, map: map });
+    }
+  </script>
+  <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDnqOixKcZMBtGeObF4uzffC2RvQHVQm8g&callback=initMap">
+    </script>
+</body>
+
+</html>
