@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="shortcut icon" href="favicon.ico">
   <link href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css">
-  <link href="test.css" rel="stylesheet" type="text/css">
+  <link href="css/test.css" rel="stylesheet" type="text/css">
   <title>Castlight Health</title>
 </head>
 
@@ -14,11 +14,11 @@
   <div class="search-results">
     <div class="search-results__summary">
       <div class="search-results__summary-description">
-        <div class="search-results__summary-title">Search for results for
+        <div class="search-results__title">Search for results for
           <span class="search-results__query">"QUERY"</span>
           [VISIT TYPE] >
         </div>
-        <div class="search-results__summary-text">[DESCRIPTION TEXT]</div>
+        <div class="search-results__text">[DESCRIPTION TEXT]</div>
       </div>
       <div class="search-results__summary-cost">[COST SUMMARY]</div>
     </div>
@@ -61,43 +61,43 @@
           <div><a href="#">Show filters</a></div>
         </div>
         <div class="search-results__pagination">
-          <a href="#">&lt;</a>
-          <a href="#">1</a>
-          <a href="#">2</a>
-          <a href="#">3</a>
-          <a href="#">4</a>
-          <a href="#">5</a>
-          <a href="#">...</a>
-          <a href="#">15</a>
-          <a href="#">&gt;</a>
+          <a class="search-results__page" href="#">&lt;</a>
+          <a class="search-results__page" href="#">1</a>
+          <a class="search-results__page" href="#">2</a>
+          <a class="search-results__page" href="#">3</a>
+          <a class="search-results__page" href="#">4</a>
+          <a class="search-results__page" href="#">5</a>
+          <a class="search-results__page" href="#">...</a>
+          <a class="search-results__page" href="#">15</a>
+          <a class="search-results__page" href="#">&gt;</a>
         </div>
         <div class="search-results__results">
-          <div class="search-results__recommended">
+          <div class="search-results__list">
             <div class="search-results__recommended-row">
               <div class="search-results__row-data">
-                <div><img src="provider.png" /></div>
+                <div><img src="assets/provider.png" /></div>
                 <div class="search-results__row-info">
-                  <span class="search-results__row-info-recommended">RECOMMENDED</span>
-                  <div class="search-results__provider"><a href="#">Pinned Provider Name</a></div>
-                  <span class="search-results__row-pinned-text">Pinned result text</span>
+                  <span class="search-results__recommended">RECOMMENDED</span>
+                  <div class="search-results__name"><a href="#">Pinned Provider Name</a></div>
+                  <span class="search-results__text">Pinned result text</span>
                 </div>
               </div>
               <div class="search-results__row-ratings">
-                <div class="search-results__row-image"><img src="star.png" /><span>4.8</span></div>
+                <div class="search-results__row-image"><img class="search-results__star" src="assets/star.png" /><span>4.8</span></div>
                 <div class="search-results__row-text">2 RATINGS</div>
               </div>
             </div>
             <div class="search-results__recommended-row">
               <div class="search-results__row-data">
-                <div><img src="provider.png" /></div>
+                <div><img src="assets/provider.png" /></div>
                 <div class="search-results__row-info">
-                  <span class="search-results__row-info-recommended">RECOMMENDED</span>
-                  <a href="#">Pinned Provider Name</a>
-                  <span>Pinned result text</span>
+                  <span class="search-results__recommended">RECOMMENDED</span>
+                  <div class="search-results__name"><a href="#">Pinned Provider Name</a></div>
+                  <span class="search-results__text">Pinned result text</span>
                 </div>
               </div>
               <div class="search-results__row-ratings">
-                <div class="search-results__row-image"><img src="star.png" /><span>4.6</span></div>
+                <div class="search-results__row-image"><img class="search-results__star" src="assets/star.png" /><span>4.6</span></div>
                 <div class="search-results__row-text">23 RATINGS</div>
               </div>
             </div>
@@ -105,26 +105,26 @@
           <div class="search-results__list">
             <div class="search-results__recommended-row">
               <div class="search-results__row-info">
-                <div><a href="#">Promoted Provider Name</a></div>
-                <div class="search-results__specialty">specialty, specialty, specialty</div>
-                <div class="search-results__address">street address</div>
-                <div class="search-results__city">city (#mi)</div>
+                <div class="search-results__name"><a href="#">Promoted Provider Name</a></div>
+                <div class="search-results__text">specialty, specialty, specialty</div>
+                <div class="search-results__subtext">street address</div>
+                <div class="search-results__subtext">city (#mi)</div>
                 <div class="search-results__in-network">IN NETWORK</div>
               </div>
               <div class="search-results__row-ratings">
-                <div class="search-results__row-image"><img src="star.png" /><span>3.6</span></div>
+                <div class="search-results__row-image"><img class="search-results__star" src="assets/star.png" /><span>3.6</span></div>
                 <div class="search-results__row-text">168 RATINGS</div>
               </div>
             </div>
             <div class="search-results__recommended-row">
               <div class="search-results__row-info">
-                <div><a href="#">Provider Name</a></div>
-                <div class="search-results__specialty">specialty, specialty, specialty</div>
-                <div class="search-results__address">street address</div>
-                <div class="search-results__city">city (#mi)</div>
+                <div class="search-results__name"><a href="#">Provider Name</a></div>
+                <div class="search-results__text">specialty, specialty, specialty</div>
+                <div class="search-results__subtext">street address</div>
+                <div class="search-results__subtext">city (#mi)</div>
               </div>
               <div class="search-results__row-ratings">
-                <div class="search-results__row-image"><img src="star.png" /><span>2.8</span></div>
+                <div class="search-results__row-image"><img class="search-results__star" src="assets/star.png" /><span>2.8</span></div>
                 <div class="search-results__row-text">2 RATINGS</div>
               </div>
             </div>

@@ -1,0 +1,16 @@
+@import url("colors.css");
+@import url("fonts.css");
+
+th {
+  color: var(--gray);
+  font-size: var(--subtext);
+  text-align: left;
+}
+
+td {
+  border: 4px;
+}
+
+select {
+  width: 150px;
+}

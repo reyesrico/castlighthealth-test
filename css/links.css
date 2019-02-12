@@ -1,0 +1,21 @@
+@import url("colors.css");
+
+a { 
+  text-decoration: none;
+}
+
+a:link {
+  color: var(--blue);
+}
+
+a:visited {
+  color: var(--blue);
+}
+
+a:hover {
+  color: var(--blue);
+}
+
+a:active {
+  color: var(--blue);
+}
